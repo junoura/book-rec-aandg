@@ -47,7 +47,7 @@ do
     fi
 done < $savefolder/automator_temp.txt
 rm $savefolder/automator_temp.txt
-$ffmpegplace -t ${reclength} -i "https://fms2.uniqueradio.jp/agqr10/aandg1.m3u8" -vf "scale=320x180" "$savefolder/${rectitle}.ts"
+$ffmpegplace -t ${reclength} -i "https://www.uniqueradio.jp/agapps/hls/cdn.m3u8" -vf "scale=320x180" "$savefolder/${rectitle}.ts"
     if [[ $recnotes == "mp4" ]]; then
 	$ffmpegplace -y -i "$savefolder/${rectitle}.ts" -vcodec libx264 -acodec aac "$savefolder/${rectitle}.mp4"
     fi
